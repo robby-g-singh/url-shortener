@@ -55,17 +55,21 @@ The following endpoints support the core functionality of creating, retrieving, 
 
 Purpose: Create a new short URL.
 
-Request: 
-- The user provides a long URL (required)
-
 Request Body:
 
 `{
-
     "originalUrl": ""
-
 }`
 
+Response Body:
+
+`{
+    "status": "success",
+    "data": {"id": 123, "shortUrl": "example.com", "originalUrl":"https://example.com/search?q=json+shape+response+body"}
+}`
+
+Errors:
+A potential error that could arise from this endpoint is in the case of when the user provides a long URL that already has a shortened URL and unique identifier.
 
 ### `GET /short_urls/{identifier}`     # Get the metadata for a short URL
 
