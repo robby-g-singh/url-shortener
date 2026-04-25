@@ -51,8 +51,19 @@ The project is centered around shortened URLs created from long URLs provided by
 
 The following endpoints support the core functionality of creating, retrieving, and resolving short URLs:
 
-`POST /short_urls`     # Create a new short URL
+### `POST /short_urls`     # Create a new short URL
 
-`GET /short_urls/{identifier}`     # Get the metadata for a short URL
+Purpose: Create a new short URL.
 
-`GET /{identifier}`     # Redirect to the original URL
+Request: 
+- The user provides a long URL (required)
+
+Request Body:
+`{
+    "originalUrl": ""
+}`
+
+
+### `GET /short_urls/{identifier}`     # Get the metadata for a short URL
+
+### `GET /{identifier}`     # Redirect to the original URL
