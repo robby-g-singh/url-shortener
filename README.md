@@ -59,8 +59,11 @@ Request:
 - The user provides a long URL (required)
 
 Request Body:
+
 `{
+
     "originalUrl": ""
+
 }`
 
 
